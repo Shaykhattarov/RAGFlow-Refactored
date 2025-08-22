@@ -10,3 +10,6 @@ wheels/
 .venv
 .env
 /ragflow/ragflow-logs
+/nginx/ssl/*
+/ragflow/keys/*
+/ragflow/history_data_agent/*
