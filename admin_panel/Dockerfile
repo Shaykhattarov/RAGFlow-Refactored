@@ -31,6 +31,6 @@ ENV PATH="/app/.venv/bin:$PATH"
 # Reset the entrypoint, don't invoke `uv`
 ENTRYPOINT []
 
-EXPOSE 8000
+EXPOSE 8501
 
 CMD ["streamlit", "run", "--server.address", "0.0.0.0", "--server.port", "8000", "src/main.py"]
