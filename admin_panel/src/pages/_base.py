@@ -12,3 +12,4 @@ class BasePage:
         st.sidebar.page_link("main.py", label="Main")
         st.sidebar.page_link("pages/users.py", label="Users")
         st.sidebar.page_link("pages/models.py", label="Models")
+        st.sidebar.page_link("pages/files.py", label="Files")

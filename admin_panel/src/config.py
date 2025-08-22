@@ -34,16 +34,6 @@ class Settings(BaseSettings):
         description="RAGFlow Database Port "
     )
 
-    # chat_model: str = Field(
-    #     default="",
-    #     descritpion="JSON String with Chat model settings"
-    # )
-
-    # embedding_model: str = Field(
-    #     default="",
-    #     descritpion="JSON String with Embedding model settings"
-    # )
-
     class Config:
         env_file = ".env"
         env_file_encoding = "utf-8"

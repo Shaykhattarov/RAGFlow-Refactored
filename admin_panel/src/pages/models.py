@@ -31,7 +31,7 @@ class ModelsPage(BasePage):
         models_dataframe = pd.DataFrame(models, columns=self.columns)
 
         placeholder = st.container()
-        placeholder.title("Модели")
+        placeholder.title("Модели созданные пользователями")
         placeholder.dataframe(
             models_dataframe,
             use_container_width=True

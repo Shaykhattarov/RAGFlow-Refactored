@@ -48,6 +48,18 @@ def get_all_default_models() -> List[Tenant]:
         users = response.scalars().fetchall()
     return users
 
+def get_all_files() -> List[File]:
+    session = session_factory()
+    statement = select(File)
+    files = []
+    try:
+        response = session.execute(statement)
+    except Exception as err:
+        print(err)
+    else:
+        files = response.scalars().fetchall()
+    return files
+
 def check_user_exists(email: str) -> bool:
     session = session_factory()
     statement = select(User).where(User.email == email)
