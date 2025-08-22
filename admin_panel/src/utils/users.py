@@ -134,17 +134,10 @@ def register_user(email: str, nickname: str, password) -> bool:
     if not create_user(user_dict):
         return False
 
-    # Создание моделей
-    if not check_tenant_llm_exists(default_chat_model):  # Если не существует, то
-        if not create_tenant_llm(
-            default_chat_model
-        ):  # Создаем модель, если не получилось то
+    if not create_tenant_llm(default_chat_model):  # Создаем модель, если не получилось то
             return False  # Возвращаем ошибку
 
-    if not check_tenant_llm_exists(default_embedding_model):  # Если не существует, то
-        if not create_tenant_llm(
-            default_embedding_model
-        ):  # Создаем модель, если не получилось то
+    if not create_tenant_llm(default_embedding_model):  # Создаем модель, если не получилось то
             return False  # Возвращаем ошибку
 
     # Создание Tenant
