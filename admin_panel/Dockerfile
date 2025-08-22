@@ -33,4 +33,4 @@ ENTRYPOINT []
 
 EXPOSE 8501
 
-CMD ["streamlit", "run", "--server.address", "0.0.0.0", "--server.port", "8000", "src/main.py"]
+CMD ["streamlit", "run", "--server.address", "0.0.0.0", "--server.port", "8501", "src/main.py"]
