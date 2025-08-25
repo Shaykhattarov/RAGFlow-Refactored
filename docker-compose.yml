@@ -19,6 +19,8 @@ services:
       - ./nginx/whitelist.conf:/etc/nginx/conf.d/whitelist.conf
       - ./nginx/proxy.conf:/etc/nginx/proxy.conf
       - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+      - ./nginx/ssl/fullchain.pem:/etc/nginx/ssl/fullchain.pem
+      - ./nginx/ssl/private_key.key:/etc/nginx/ssl/private_key.key
       - ./nginx/nginx_htpasswd:/etc/nginx/.htpasswd:ro
       - ./ragflow/ragflow-logs:/ragflow/logs
       - ./ragflow/history_data_agent:/ragflow/history_data_agent
