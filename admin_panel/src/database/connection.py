@@ -5,8 +5,8 @@ from sqlalchemy.ext.declarative import declarative_base
 from config import settings
 
 
-DATABASE_URL = f"mysql+mysqlconnector://{settings.mysql_user}:{settings.mysql_root_password}" + \
-               f"@{settings.mysql_host}:{settings.mysql_port}/{settings.mysql_database_name}"
+DATABASE_URL = f"mysql+mysqlconnector://{settings.mysql_user}:{settings.mysql_password}" + \
+               f"@{settings.mysql_host}:{settings.mysql_tcp_port}/{settings.mysql_database_name}"
 
 Base = declarative_base()
 engine = create_engine(DATABASE_URL, echo=False)

@@ -19,6 +19,11 @@ class Settings(BaseSettings):
         description="RAGFlow Database Name"
     )
 
+    mysql_password: str = Field(
+        default="password",
+        description="RAGFlow Database Name"
+    )
+
     mysql_root_password: str = Field(
         default="password",
         description="RAGFlow Database Password"
@@ -29,7 +34,7 @@ class Settings(BaseSettings):
         description="RAGFlow Database Host"
     )
 
-    mysql_port: int = Field(
+    mysql_tcp_port: int = Field(
         default=3306,
         description="RAGFlow Database Port "
     )
